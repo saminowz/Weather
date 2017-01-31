@@ -1,0 +1,21 @@
+{{> header}}
+{{> nav}}
+      <div class="col -xs-12">
+        <form  class="form-group" action="" method="get">
+           <input class="form-control" id="adress"  type="text" name="adress">
+           <button type="submit" id="btn" class="btn btn-primary form-control">Find Weather</button>
+        </form>
+      </div>
+
+      <script>
+      document.getElementById("btn").onclick=(e)=>{
+        var xhttp = new XMLHttpRequest();
+          e.preventDefault();
+          xhttp.open("GET", "/?adress="+document.getElementById("adress").value, true);
+          xhttp.send();
+
+
+
+        }
+      </script>
+{{> footer}}
